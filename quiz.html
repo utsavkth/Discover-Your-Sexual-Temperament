@@ -7,30 +7,77 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="container">
-    <header>
-      <h2 id="welcomeText">Loading...</h2>
-      <div id="progressBarContainer" style="background: #e5e7eb; border-radius: 999px; height: 6px; margin-top: 1rem; margin-bottom: 2rem;">
-        <div id="progressBar" style="width: 0%; height: 100%; background: #7f5af0; border-radius: 999px; transition: width 0.3s;"></div>
+
+<!-- ✅ NAVIGATION BAR -->
+<nav class="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo">
+      <img src="logo.png" alt="Logo" />
+    </a>
+
+    <div class="nav-toggle" onclick="toggleMenu()">☰</div>
+
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <div class="dropdown">
+        <span class="dropdown-toggle" onclick="toggleDropdown(event)">Dive Deeper ▾</span>
+        <div class="dropdown-menu">
+          <a href="https://utsavkth.github.io/Discover-Your-Love-Language/" target="_blank">Love Language Quiz</a>
+          <a href="https://utsavkth.github.io/Discover-Your-Attachment-Style/" target="_blank">Attachment Style Quiz</a>
+        </div>
       </div>
-    </header>
-
-    <main id="quizContainer">
-      <!-- Question will be injected here -->
-    </main>
-
-    <footer class="quiz-footer" style="display: flex; justify-content: space-between; margin-top: 2rem;">
-      <button id="prevBtn" disabled>Previous</button>
-      <button id="nextBtn">Next</button>
-    </footer>
+    </div>
   </div>
+</nav>
 
-  <!-- Load Question Data -->
-  <script src="questions_female.js"></script>
-  <script src="questions_male.js"></script>
-  <script src="questions_neutral.js"></script>
+<!-- ✅ MAIN QUIZ SECTION -->
+<div class="container">
+  <header>
+    <h2 id="welcomeText">Loading...</h2>
+    <div id="progressBarContainer" style="background: #e5e7eb; border-radius: 999px; height: 6px; margin-top: 1rem; margin-bottom: 2rem;">
+      <div id="progressBar" style="width: 0%; height: 100%; background: #7f5af0; border-radius: 999px; transition: width 0.3s;"></div>
+    </div>
+  </header>
 
-  <!-- Main Quiz Logic -->
-  <script src="quiz.js"></script>
+  <main id="quizContainer">
+    <!-- Question will be injected here -->
+  </main>
+
+  <footer class="quiz-footer" style="display: flex; justify-content: space-between; margin-top: 2rem;">
+    <button id="prevBtn" disabled>Previous</button>
+    <button id="nextBtn">Next</button>
+  </footer>
+</div>
+
+<!-- JavaScript for nav toggle -->
+<script>
+  function toggleMenu() {
+    document.getElementById("navLinks").classList.toggle("show");
+  }
+
+  function toggleDropdown(event) {
+    event.stopPropagation();
+    const dropdown = event.target.closest('.dropdown');
+    dropdown.classList.toggle("show");
+
+    document.addEventListener("click", function handler(e) {
+      if (!dropdown.contains(e.target)) {
+        dropdown.classList.remove("show");
+        document.removeEventListener("click", handler);
+      }
+    });
+  }
+</script>
+
+<!-- Load Question Data -->
+<script src="questions_female.js"></script>
+<script src="questions_male.js"></script>
+<script src="questions_neutral.js"></script>
+
+<!-- Main Quiz Logic -->
+<script src="quiz.js"></script>
+
 </body>
 </html>

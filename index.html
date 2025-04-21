@@ -6,23 +6,15 @@
   <title>Discover Your Sexual Temperament</title>
   <link rel="stylesheet" href="style.css" />
   <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background: #f9f9fb;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      margin: 0;
-    }
     .homepage-card {
       background: white;
       border-radius: 20px;
       box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
       display: flex;
       max-width: 1000px;
-      width: 90%;
+      width: 100%;
       overflow: hidden;
+      margin: 2rem auto;
     }
     .form-section {
       flex: 1;
@@ -75,31 +67,83 @@
       flex: 1;
       background: url('homepage-visual.png') no-repeat center/cover;
     }
+
+    .container {
+      max-width: 1000px;
+      margin: 6rem auto;
+      padding: 1rem;
+    }
   </style>
 </head>
 <body>
-  <div class="homepage-card">
-    <div class="form-section">
-      <h1>Discover Your Sexual Temperament</h1>
-      <p>Understand what turns you on and what holds you back. Based on the science from <em>Come As You Are</em> by Emily Nagoski.</p>
 
-      <form id="userForm">
-        <input type="text" id="name" name="name" placeholder="Your First Name (e.g., Alex)" required />
-        <select id="gender" name="gender" required>
-          <option value="">--- Select ---</option>
-          <option value="female">Female</option>
-          <option value="male">Male</option>
-          <option value="neutral">Prefer not to say / Other</option>
-        </select>
-        <button type="submit">Start Questionnaire</button>
-      </form>
+  <!-- ✅ NAVIGATION BAR -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <img src="logo.png" alt="Logo" />
+      </a>
 
-      <p class="footer">Built with ❤️ by Utsav • Inspired by real science, not social media</p>
+      <div class="nav-toggle" onclick="toggleMenu()">☰</div>
+
+      <div class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+
+        <div class="dropdown">
+          <span class="dropdown-toggle" onclick="toggleDropdown(event)">Dive Deeper ▾</span>
+          <div class="dropdown-menu">
+            <a href="https://utsavkth.github.io/Discover-Your-Love-Language/" target="_blank">Discover Your Love Language</a>
+            <a href="https://utsavkth.github.io/Discover-Your-Attachment-Style/" target="_blank">Discover Your Attachment Style Quiz</a>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="image-section"></div>
+  </nav>
+
+  <!-- ✅ MAIN CONTENT -->
+  <div class="container">
+    <div class="homepage-card">
+      <div class="form-section">
+        <h1>Discover Your Sexual Temperament</h1>
+        <p>Understand what turns you on and what holds you back. Based on the science from <em>Come As You Are</em> by Emily Nagoski.</p>
+
+        <form id="userForm">
+          <input type="text" id="name" name="name" placeholder="Your First Name (e.g., Alex)" required />
+          <select id="gender" name="gender" required>
+            <option value="">--- Select ---</option>
+            <option value="female">Female</option>
+            <option value="male">Male</option>
+            <option value="neutral">Prefer not to say / Other</option>
+          </select>
+          <button type="submit">Start Questionnaire</button>
+        </form>
+
+        <p class="footer">Built with ❤️ by Utsav • Inspired by real science, not social media</p>
+      </div>
+      <div class="image-section"></div>
+    </div>
   </div>
 
   <script>
+    function toggleMenu() {
+      document.getElementById("navLinks").classList.toggle("show");
+    }
+
+    function toggleDropdown(event) {
+      event.stopPropagation();
+      const dropdown = event.target.closest('.dropdown');
+      dropdown.classList.toggle("show");
+
+      document.addEventListener("click", function handler(e) {
+        if (!dropdown.contains(e.target)) {
+          dropdown.classList.remove("show");
+          document.removeEventListener("click", handler);
+        }
+      });
+    }
+
     document.getElementById("userForm").addEventListener("submit", function (e) {
       e.preventDefault();
       const name = document.getElementById("name").value.trim();

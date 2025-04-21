@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact – Sexual Temperament Quiz</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- ✅ NAVIGATION BAR -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <img src="logo.png" alt="Logo" />
+      </a>
+
+      <div class="nav-toggle" onclick="toggleMenu()">☰</div>
+
+      <div class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+
+        <div class="dropdown">
+          <span class="dropdown-toggle" onclick="toggleDropdown(event)">Dive Deeper ▾</span>
+          <div class="dropdown-menu">
+            <a href="https://utsavkth.github.io/Discover-Your-Love-Language/" target="_blank">Love Language Quiz</a>
+            <a href="https://utsavkth.github.io/Discover-Your-Attachment-Style/" target="_blank">Attachment Style Quiz</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h1>Let's Connect</h1>
+    <p>This isn’t just a quiz — it’s a conversation starter. If something resonated, sparked curiosity, or you just want to say hey — feel free to drop a message.</p>
+
+    <p>Email me at: <a href="mailto:utsav@example.com">utsav@example.com</a></p>
+    <p style="font-size: 0.9rem; color: #888;">No spam. No mailing lists. Just a real person reading it.</p>
+  </div>
+
+  <footer>
+    Built with ❤️ by Utsav • Inspired by real science, not social media
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("navLinks").classList.toggle("show");
+    }
+
+    function toggleDropdown(event) {
+      event.stopPropagation();
+      const dropdown = event.target.closest('.dropdown');
+      dropdown.classList.toggle("show");
+
+      document.addEventListener("click", function handler(e) {
+        if (!dropdown.contains(e.target)) {
+          dropdown.classList.remove("show");
+          document.removeEventListener("click", handler);
+        }
+      });
+    }
+  </script>
+</body>
+</html>

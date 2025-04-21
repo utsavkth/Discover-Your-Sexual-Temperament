@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About – Sexual Temperament Quiz</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- ✅ NAVIGATION BAR -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <img src="logo.png" alt="Logo" />
+      </a>
+
+      <div class="nav-toggle" onclick="toggleMenu()">☰</div>
+
+      <div class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+
+        <div class="dropdown">
+          <span class="dropdown-toggle" onclick="toggleDropdown(event)">Dive Deeper ▾</span>
+          <div class="dropdown-menu">
+            <a href="https://utsavkth.github.io/Discover-Your-Love-Language/" target="_blank">Love Language Quiz</a>
+            <a href="https://utsavkth.github.io/Discover-Your-Attachment-Style/" target="_blank">Attachment Style Quiz</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h1>What This Is</h1>
+    <p>This project is based on <em>Come As You Are</em> by Dr. Emily Nagoski. It’s here to help you understand your sexual temperament — how your mind and body react to context, safety, stress, and stimulation.</p>
+
+    <h2>Why I Created This</h2>
+    <p>Because people deserve to feel seen, safe, and sexually understood. This isn’t a quiz for laughs. It’s a self-discovery tool — for the curious, the confused, and the brave.</p>
+
+    <ul>
+      <li>💡 Backed by real sex science</li>
+      <li>🎨 Designed with empathy and detail</li>
+      <li>🧠 Meant to prompt reflection, not judgment</li>
+      <li>❤️ Rooted in emotional and sexual well-being</li>
+    </ul>
+
+    <p>Whether you're here alone or with a partner in mind — thank you for being curious. You’re already doing the work.</p>
+  </div>
+
+  <footer>
+    Built with ❤️ by Utsav • Inspired by real science, not social media
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("navLinks").classList.toggle("show");
+    }
+
+    function toggleDropdown(event) {
+      event.stopPropagation();
+      const dropdown = event.target.closest('.dropdown');
+      dropdown.classList.toggle("show");
+
+      document.addEventListener("click", function handler(e) {
+        if (!dropdown.contains(e.target)) {
+          dropdown.classList.remove("show");
+          document.removeEventListener("click", handler);
+        }
+      });
+    }
+  </script>
+</body>
+</html>
