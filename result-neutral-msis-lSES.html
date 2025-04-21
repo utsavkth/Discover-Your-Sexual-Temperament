@@ -8,6 +8,26 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <nav class="navbar">
+    <div class="nav-container">
+    <a class="nav-logo" href="index.html">
+    <img alt="Logo" src="logo.png"/>
+    </a>
+    <div class="nav-toggle" onclick="toggleMenu()">☰</div>
+    <div class="nav-links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <div class="dropdown">
+    <span class="dropdown-toggle" onclick="toggleDropdown(event)">Dive Deeper ▾</span>
+    <div class="dropdown-menu">
+    <a href="https://utsavkth.github.io/Discover-Your-Love-Language/" target="_blank">Discover Your Love Language</a>
+    <a href="https://utsavkth.github.io/Discover-Your-Attachment-Style/" target="_blank">Discover Your Attachment Style</a>
+    </div>
+    </div>
+    </div>
+    </div>
+    </nav>
   <div class="container">
     <header>
       <h2>Your Sexual Temperament Summary</h2>
@@ -15,21 +35,26 @@
     </header>
 
     <section>
-      <p>Hey <strong><span id="namePlaceholder">friend</span></strong>, your brakes show up depending on context, and your accelerator needs a little help to get going. You’re responsive—but slowly, and only in the right environment.</p>
-
+      <div class="result-image-container">
+        <img src="result-neutral-msis-lSES.png" alt="Visual representing Medium SIS and Low SES for neutral identity" class="result-image" />
+      </div>
+    
+      <p>Hey <strong><span id="namePlaceholder">friend</span></strong>, you’re thoughtful and deliberate when it comes to intimacy. You may not feel easily aroused—but that doesn’t mean you’re disconnected. It just means your body needs emotional alignment first.</p>
+    
       <h3>What This Means</h3>
-      <p>You might need space, calm, and emotional connection before arousal becomes accessible. And that’s totally valid. Your system is sensitive and protective—and with the right support, very capable.</p>
-
+      <p>Your brakes may engage depending on how you feel. You’re not easily swept into sexual energy unless your mood and the moment really support it. And that’s a beautiful thing—it makes your desire honest.</p>
+    
       <h3>Suggestions</h3>
       <ul>
-        <li>📖 Read or listen to erotica to build desire gradually</li>
-        <li>🕯️ Set up consistent, low-pressure rituals around intimacy</li>
-        <li>🧘 Try slow movement or sensual self-care beforehand</li>
+        <li>🧘‍♂️ Begin with mindfulness and emotional presence</li>
+        <li>🌱 Explore fantasy and private rituals that awaken curiosity</li>
+        <li>📖 Consider journaling what builds anticipation vs. what shuts you down</li>
       </ul>
-
+    
       <h3>Next Step</h3>
-      <p><a href="sexy-contexts.html">🔗 Try the Sexy Contexts Worksheet →</a></p>
+      <button class="nav-button" onclick="location.href='sexy-contexts.html'">🔗 Try the Sexy Contexts Worksheet →</button>
     </section>
+    
 
     <footer>
       <button onclick="location.href='index.html'">Start Over</button>
@@ -42,5 +67,23 @@
       }
     </script>
   </div>
+  <script>
+    function toggleMenu() {
+      document.getElementById("navLinks").classList.toggle("show");
+    }
+  
+    function toggleDropdown(event) {
+      event.stopPropagation();
+      const dropdown = event.target.closest('.dropdown');
+      dropdown.classList.toggle("show");
+  
+      document.addEventListener("click", function handler(e) {
+        if (!dropdown.contains(e.target)) {
+          dropdown.classList.remove("show");
+          document.removeEventListener("click", handler);
+        }
+      });
+    }
+  </script>
 </body>
 </html>
