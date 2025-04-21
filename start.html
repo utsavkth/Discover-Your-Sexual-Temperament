@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Discover Your Sexual Temperament</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .homepage-card {
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+      display: flex;
+      max-width: 1000px;
+      width: 100%;
+      overflow: hidden;
+      margin: 2rem auto;
+    }
+    .form-section {
+      flex: 1;
+      padding: 3rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .form-section h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+    .form-section p {
+      color: #555;
+      font-size: 1rem;
+      margin-bottom: 2rem;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+    input, select {
+      width: 100%;
+      padding: 0.75rem;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+    }
+    button {
+      background: linear-gradient(to right, #7f5af0, #5c3dcf);
+      color: white;
+      padding: 1rem;
+      border: none;
+      font-size: 1rem;
+      font-weight: bold;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    button:hover {
+      background: #5c3dcf;
+    }
+    .footer {
+      font-size: 0.85rem;
+      color: #888;
+      margin-top: 2rem;
+    }
+    .image-section {
+      flex: 1;
+      background: url('homepage-visual.png') no-repeat center/cover;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 6rem auto;
+      padding: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ✅ NAVIGATION BAR -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <img src="logo.png" alt="Logo" />
+      </a>
+
+      <div class="nav-toggle" onclick="toggleMenu()">☰</div>
+
+      <div class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+
+        <div class="dropdown">
+          <span class="dropdown-toggle" onclick="toggleDropdown(event)">Dive Deeper ▾</span>
+          <div class="dropdown-menu">
+            <a href="all-types.html">🧠 Explore All Sexual Temperament Profiles</a>
+            <a href="https://utsavkth.github.io/Discover-Your-Love-Language/" target="_blank">💌 Discover Your Love Language</a>
+            <a href="https://utsavkth.github.io/Discover-Your-Attachment-Style/" target="_blank">🔗 Discover Your Attachment Style</a>
+          </div>
+        </div>
+        
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ✅ MAIN CONTENT -->
+  <div class="container">
+    <div class="homepage-card">
+      <div class="form-section">
+        <h1>Discover Your Sexual Temperament</h1>
+        <p>Understand what turns you on and what holds you back. Based on the science from <em>Come As You Are</em> by Emily Nagoski.</p>
+
+        <form id="userForm">
+          <input type="text" id="name" name="name" placeholder="Your First Name (e.g., Alex)" required />
+          <select id="gender" name="gender" required>
+            <option value="">--- Select ---</option>
+            <option value="female">Female</option>
+            <option value="male">Male</option>
+            <option value="neutral">Prefer not to say / Other</option>
+          </select>
+          <button type="submit">Start Questionnaire</button>
+        </form>
+
+        <p class="footer">Built with ❤️ by Utsav • Inspired by real science, not social media</p>
+      </div>
+      <div class="image-section"></div>
+    </div>
+  </div>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("navLinks").classList.toggle("show");
+    }
+
+    function toggleDropdown(event) {
+      event.stopPropagation();
+      const dropdown = event.target.closest('.dropdown');
+      dropdown.classList.toggle("show");
+
+      document.addEventListener("click", function handler(e) {
+        if (!dropdown.contains(e.target)) {
+          dropdown.classList.remove("show");
+          document.removeEventListener("click", handler);
+        }
+      });
+    }
+
+    document.getElementById("userForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      const name = document.getElementById("name").value.trim();
+      const gender = document.getElementById("gender").value;
+      if (name && gender) {
+        localStorage.setItem("name", name);
+        localStorage.setItem("gender", gender);
+        window.location.href = "quiz.html";
+      }
+    });
+  </script>
+</body>
+</html>
