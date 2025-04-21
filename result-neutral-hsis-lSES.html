@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your Results – High SIS, Low SES (Neutral)</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h2>Your Sexual Temperament Summary</h2>
+      <p class="subheading">Profile: <strong>High Inhibition (SIS) + Low Excitation (SES)</strong></p>
+    </header>
+
+    <section>
+      <p>Hey <strong><span id="namePlaceholder">friend</span></strong>, you’re careful with your arousal—and not easily pulled into desire. Your system is wired for caution, not for urgency. That doesn’t mean you’re broken. It means you’re protective.</p>
+
+      <h3>What This Means</h3>
+      <p>You likely need high levels of safety, trust, and emotional connection before arousal happens. And even then, your body might need help tuning in. This is a valid way of experiencing sexuality.</p>
+
+      <h3>Suggestions</h3>
+      <ul>
+        <li>🧘 Use calming rituals before intimacy to quiet the brakes</li>
+        <li>🎧 Try audio-based erotic content to invite stimulation</li>
+        <li>📖 Discover your own language of turn-on through journaling</li>
+      </ul>
+
+      <h3>Next Step</h3>
+      <p><a href="sexy-contexts.html">🔗 Try the Sexy Contexts Worksheet →</a></p>
+    </section>
+
+    <footer>
+      <button onclick="location.href='index.html'">Start Over</button>
+    </footer>
+
+    <script>
+      const name = localStorage.getItem("name");
+      if (name) {
+        document.getElementById("namePlaceholder").textContent = name;
+      }
+    </script>
+  </div>
+</body>
+</html>

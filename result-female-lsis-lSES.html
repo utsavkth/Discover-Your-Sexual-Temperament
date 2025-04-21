@@ -1,0 +1,47 @@
+<!-- result-female-lsis-lSES.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your Results – Low SIS, Low SES</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h2>Your Sexual Temperament Summary</h2>
+      <p class="subheading">Profile: <strong>Low Inhibition (SIS) + Low Excitation (SES)</strong></p>
+    </header>
+
+    <section>
+      <p>Hey <strong><span id="namePlaceholder">friend</span></strong>, you’re relaxed and open—but you may not feel easily turned on without deliberate effort. Your brakes don’t fire much, but your arousal system doesn’t naturally pick up cues either. You’re chill... maybe too chill 😄</p>
+
+      <h3>What This Means</h3>
+      <p>You don’t stress much about sex—performance, trust, or body image rarely interfere. But you also don’t get triggered by arousal cues easily, so sex might feel distant or require intentional effort.</p>
+
+      <h3>Suggestions</h3>
+      <ul>
+        <li>🎧 Increase stimulation intentionally—fantasy, toys, environment</li>
+        <li>🧠 Schedule sexy time when your mind is calm and open</li>
+        <li>🧩 Think of arousal like a skill, not a reaction</li>
+      </ul>
+
+      <h3>Next Step</h3>
+      <p><a href="sexy-contexts.html">🔗 Try the Sexy Contexts Worksheet →</a></p>
+    </section>
+
+    <footer>
+      <button onclick="location.href='index.html'">Start Over</button>
+    </footer>
+
+    <script>
+      const name = localStorage.getItem("name");
+      if (name) {
+        document.getElementById("namePlaceholder").textContent = name;
+      }
+    </script>
+  </div>
+</body>
+</html>
+

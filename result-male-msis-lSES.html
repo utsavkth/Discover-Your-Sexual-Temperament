@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your Results – Medium SIS, Low SES (Male)</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h2>Your Sexual Temperament Summary</h2>
+      <p class="subheading">Profile: <strong>Medium Inhibition (SIS) + Low Excitation (SES)</strong></p>
+    </header>
+
+    <section>
+      <p>Hey <strong><span id="namePlaceholder">friend</span></strong>, your arousal is slow to build, and your brakes engage depending on your mindset and environment. It’s not dysfunction—it’s a signal to find the right conditions.</p>
+
+      <h3>What This Means</h3>
+      <p>You may need space, calm, and deep trust to feel turned on—and strong cues like fantasy, visuals, or scent to accelerate the process. This balance is about tuning into yourself before tuning in to someone else.</p>
+
+      <h3>Suggestions</h3>
+      <ul>
+        <li>🧘 Focus on safety and emotional presence</li>
+        <li>📖 Use narrative or erotic fiction to explore your mind</li>
+        <li>💡 Reduce pressure; increase curiosity and pleasure</li>
+      </ul>
+
+      <h3>Next Step</h3>
+      <p><a href="sexy-contexts.html">🔗 Try the Sexy Contexts Worksheet →</a></p>
+    </section>
+
+    <footer>
+      <button onclick="location.href='index.html'">Start Over</button>
+    </footer>
+
+    <script>
+      const name = localStorage.getItem("name");
+      if (name) {
+        document.getElementById("namePlaceholder").textContent = name;
+      }
+    </script>
+  </div>
+</body>
+</html>

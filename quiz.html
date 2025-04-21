@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sexual Temperament Questionnaire</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h2 id="welcomeText">Loading...</h2>
+      <div id="progressBarContainer" style="background: #e5e7eb; border-radius: 999px; height: 6px; margin-top: 1rem; margin-bottom: 2rem;">
+        <div id="progressBar" style="width: 0%; height: 100%; background: #7f5af0; border-radius: 999px; transition: width 0.3s;"></div>
+      </div>
+    </header>
+
+    <main id="quizContainer">
+      <!-- Question will be injected here -->
+    </main>
+
+    <footer class="quiz-footer" style="display: flex; justify-content: space-between; margin-top: 2rem;">
+      <button id="prevBtn" disabled>Previous</button>
+      <button id="nextBtn">Next</button>
+    </footer>
+  </div>
+
+  <!-- Load Question Data -->
+  <script src="questions_female.js"></script>
+  <script src="questions_male.js"></script>
+  <script src="questions_neutral.js"></script>
+
+  <!-- Main Quiz Logic -->
+  <script src="quiz.js"></script>
+</body>
+</html>

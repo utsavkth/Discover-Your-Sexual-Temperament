@@ -1,0 +1,46 @@
+<!-- 2. result-neutral-lsis-mSES.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your Results – Low SIS, Medium SES (Neutral)</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h2>Your Sexual Temperament Summary</h2>
+      <p class="subheading">Profile: <strong>Low Inhibition (SIS) + Medium Excitation (SES)</strong></p>
+    </header>
+
+    <section>
+      <p>Hey <strong><span id="namePlaceholder">friend</span></strong>, you’re laid-back and open to arousal when it feels right. You don’t stress much about sex, but you also don’t jump in blindly—you wait for the spark.</p>
+
+      <h3>What This Means</h3>
+      <p>You respond to good vibes and light stimulation, but you need the context to feel relaxed and safe. You have the ability to drop into arousal easily when the right elements come together.</p>
+
+      <h3>Suggestions</h3>
+      <ul>
+        <li>🎧 Use music, ambiance, and positive self-talk to enhance mood</li>
+        <li>💭 Build intimacy with your mind first—fantasy helps</li>
+        <li>💬 Share what kind of cues help you feel open and present</li>
+      </ul>
+
+      <h3>Next Step</h3>
+      <p><a href="sexy-contexts.html">🔗 Try the Sexy Contexts Worksheet →</a></p>
+    </section>
+
+    <footer>
+      <button onclick="location.href='index.html'">Start Over</button>
+    </footer>
+
+    <script>
+      const name = localStorage.getItem("name");
+      if (name) {
+        document.getElementById("namePlaceholder").textContent = name;
+      }
+    </script>
+  </div>
+</body>
+</html>

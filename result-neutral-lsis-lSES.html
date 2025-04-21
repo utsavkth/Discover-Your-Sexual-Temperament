@@ -1,0 +1,46 @@
+<!-- 1. result-neutral-lsis-lSES.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your Results – Low SIS, Low SES (Neutral)</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h2>Your Sexual Temperament Summary</h2>
+      <p class="subheading">Profile: <strong>Low Inhibition (SIS) + Low Excitation (SES)</strong></p>
+    </header>
+
+    <section>
+      <p>Hey <strong><span id="namePlaceholder">friend</span></strong>, you’re not often held back by inner brakes—but your sexual excitement may not be easily triggered either. You tend to stay in a calm, neutral baseline.</p>
+
+      <h3>What This Means</h3>
+      <p>Sexual desire might not come automatically for you—it may need to be invited. And that’s okay. You’re probably steady, thoughtful, and chill. Desire may flourish more with intention than instinct.</p>
+
+      <h3>Suggestions</h3>
+      <ul>
+        <li>📅 Create space for sexual exploration even if the mood isn’t automatic</li>
+        <li>🎧 Try fantasy, audio, or sensual cues to activate your system</li>
+        <li>🧘 Slow, mindful practices can help you reconnect with desire</li>
+      </ul>
+
+      <h3>Next Step</h3>
+      <p><a href="sexy-contexts.html">🔗 Try the Sexy Contexts Worksheet →</a></p>
+    </section>
+
+    <footer>
+      <button onclick="location.href='index.html'">Start Over</button>
+    </footer>
+
+    <script>
+      const name = localStorage.getItem("name");
+      if (name) {
+        document.getElementById("namePlaceholder").textContent = name;
+      }
+    </script>
+  </div>
+</body>
+</html>

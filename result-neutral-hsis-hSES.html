@@ -1,0 +1,46 @@
+<!-- 9. result-neutral-hsis-hSES.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your Results – High SIS, High SES (Neutral)</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h2>Your Sexual Temperament Summary</h2>
+      <p class="subheading">Profile: <strong>High Inhibition (SIS) + High Excitation (SES)</strong></p>
+    </header>
+
+    <section>
+      <p>Hey <strong><span id="namePlaceholder">friend</span></strong>, your mind and body are both highly responsive—to what turns you on, and to what shuts you down. You’re deep, perceptive, and emotionally tuned-in.</p>
+
+      <h3>What This Means</h3>
+      <p>In the right setting, you can go from 0 to 🔥 quickly—but if something feels off, your system slams the brakes. That’s not a flaw—it’s a double-sensitive system. The key is alignment and trust.</p>
+
+      <h3>Suggestions</h3>
+      <ul>
+        <li>🎧 Build your ideal vibe: sound, story, scent, and connection</li>
+        <li>🧠 Journal about arousal patterns to see what flips the switch</li>
+        <li>🔁 Repeat experiences that blend safety and excitement</li>
+      </ul>
+
+      <h3>Next Step</h3>
+      <p><a href="sexy-contexts.html">🔗 Try the Sexy Contexts Worksheet →</a></p>
+    </section>
+
+    <footer>
+      <button onclick="location.href='index.html'">Start Over</button>
+    </footer>
+
+    <script>
+      const name = localStorage.getItem("name");
+      if (name) {
+        document.getElementById("namePlaceholder").textContent = name;
+      }
+    </script>
+  </div>
+</body>
+</html>

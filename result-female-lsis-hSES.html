@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your Results – Low SIS, High SES</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h2>Your Sexual Temperament Summary</h2>
+      <p class="subheading">Profile: <strong>Low Inhibition (SIS) + High Excitation (SES)</strong></p>
+    </header>
+
+    <section>
+      <p>Hey <strong><span id="namePlaceholder">friend</span></strong>, your body is ready for action. You’re highly sensitive to sexual cues and barely hit the brakes. This is a high-desire combo that thrives in novelty and intimacy.</p>
+
+      <h3>What This Means</h3>
+      <p>You’re easy to turn on and not so easy to turn off. This could make you more exploratory, spontaneous, and pleasure-driven—but be mindful not to let it burn you out.</p>
+
+      <h3>Suggestions</h3>
+      <ul>
+        <li>💥 Embrace your sensuality, but set healthy boundaries</li>
+        <li>💌 Connect emotional intimacy with physical play</li>
+        <li>🧠 Watch for over-reliance on stimulation to manage stress</li>
+      </ul>
+
+      <h3>Next Step</h3>
+      <p><a href="sexy-contexts.html">🔗 Try the Sexy Contexts Worksheet →</a></p>
+    </section>
+
+    <footer>
+      <button onclick="location.href='index.html'">Start Over</button>
+    </footer>
+
+    <script>
+      const name = localStorage.getItem("name");
+      if (name) {
+        document.getElementById("namePlaceholder").textContent = name;
+      }
+    </script>
+  </div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your Results – High SIS, High SES</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h2>Your Sexual Temperament Summary</h2>
+      <p class="subheading">Profile: <strong>High Inhibition (SIS) + High Excitation (SES)</strong></p>
+    </header>
+
+    <section>
+      <p>Hey <strong><span id="namePlaceholder">friend</span></strong>, your system says YES and NO at the same time. You’re sensitive to both arousal and brakes—which means you can feel very turned on, then suddenly very off.</p>
+
+      <h3>What This Means</h3>
+      <p>You're complex (in a good way). You respond deeply to cues, but only if your environment, mindset, and trust are aligned. Great sex for you = preparation, play, and presence.</p>
+
+      <h3>Suggestions</h3>
+      <ul>
+        <li>🧠 Rehearse sexy scenarios mentally—it helps build readiness</li>
+        <li>🎧 Use sensory immersion—smell, sound, texture</li>
+        <li>💬 Communicate clearly when brakes are engaged—no shame</li>
+      </ul>
+
+      <h3>Next Step</h3>
+      <p><a href="sexy-contexts.html">🔗 Try the Sexy Contexts Worksheet →</a></p>
+    </section>
+
+    <footer>
+      <button onclick="location.href='index.html'">Start Over</button>
+    </footer>
+
+    <script>
+      const name = localStorage.getItem("name");
+      if (name) {
+        document.getElementById("namePlaceholder").textContent = name;
+      }
+    </script>
+  </div>
+</body>
+</html>

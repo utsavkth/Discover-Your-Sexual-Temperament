@@ -1,0 +1,46 @@
+<!-- 5. result-neutral-msis-mSES.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your Results – Medium SIS, Medium SES (Neutral)</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h2>Your Sexual Temperament Summary</h2>
+      <p class="subheading">Profile: <strong>Medium Inhibition (SIS) + Medium Excitation (SES)</strong></p>
+    </header>
+
+    <section>
+      <p>Hey <strong><span id="namePlaceholder">friend</span></strong>, you live in the in-between: sometimes it’s a yes, sometimes a maybe. Arousal isn’t automatic—it’s contextual. That makes you attuned and complex.</p>
+
+      <h3>What This Means</h3>
+      <p>When trust is present and the mood is right, you can access deep pleasure. But when something’s off—stress, miscommunication, pressure—your brakes engage. You’re not hard to please—you just need the right mix.</p>
+
+      <h3>Suggestions</h3>
+      <ul>
+        <li>🎧 Use sound, scent, and fantasy to tune in</li>
+        <li>🧠 Debrief with yourself after intimacy—what worked?</li>
+        <li>🛠️ Set boundaries to protect your emotional safety</li>
+      </ul>
+
+      <h3>Next Step</h3>
+      <p><a href="sexy-contexts.html">🔗 Try the Sexy Contexts Worksheet →</a></p>
+    </section>
+
+    <footer>
+      <button onclick="location.href='index.html'">Start Over</button>
+    </footer>
+
+    <script>
+      const name = localStorage.getItem("name");
+      if (name) {
+        document.getElementById("namePlaceholder").textContent = name;
+      }
+    </script>
+  </div>
+</body>
+</html>

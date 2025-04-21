@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your Results – High SIS, High SES (Male)</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h2>Your Sexual Temperament Summary</h2>
+      <p class="subheading">Profile: <strong>High Inhibition (SIS) + High Excitation (SES)</strong></p>
+    </header>
+
+    <section>
+      <p>Hey <strong><span id="namePlaceholder">friend</span></strong>, you’re complex and responsive. You’re very arousable, but you’re also highly reactive to context—both positively and negatively.</p>
+
+      <h3>What This Means</h3>
+      <p>Great sex for you requires syncing your inner green lights and red lights. When excitement is high and brakes are off, it’s 🔥. But if something feels off—boom, arousal gone. You need intentional, supportive intimacy.</p>
+
+      <h3>Suggestions</h3>
+      <ul>
+        <li>🧠 Track what flips your brakes—journal or reflect on patterns</li>
+        <li>🎯 When aroused, slow down to stay present—not rushed</li>
+        <li>📖 Explore deeper connection and safety-building activities</li>
+      </ul>
+
+      <h3>Next Step</h3>
+      <p><a href="sexy-contexts.html">🔗 Try the Sexy Contexts Worksheet →</a></p>
+    </section>
+
+    <footer>
+      <button onclick="location.href='index.html'">Start Over</button>
+    </footer>
+
+    <script>
+      const name = localStorage.getItem("name");
+      if (name) {
+        document.getElementById("namePlaceholder").textContent = name;
+      }
+    </script>
+  </div>
+</body>
+</html>

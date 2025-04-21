@@ -1,0 +1,46 @@
+<!-- 4. result-neutral-msis-lSES.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your Results – Medium SIS, Low SES (Neutral)</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h2>Your Sexual Temperament Summary</h2>
+      <p class="subheading">Profile: <strong>Medium Inhibition (SIS) + Low Excitation (SES)</strong></p>
+    </header>
+
+    <section>
+      <p>Hey <strong><span id="namePlaceholder">friend</span></strong>, your brakes show up depending on context, and your accelerator needs a little help to get going. You’re responsive—but slowly, and only in the right environment.</p>
+
+      <h3>What This Means</h3>
+      <p>You might need space, calm, and emotional connection before arousal becomes accessible. And that’s totally valid. Your system is sensitive and protective—and with the right support, very capable.</p>
+
+      <h3>Suggestions</h3>
+      <ul>
+        <li>📖 Read or listen to erotica to build desire gradually</li>
+        <li>🕯️ Set up consistent, low-pressure rituals around intimacy</li>
+        <li>🧘 Try slow movement or sensual self-care beforehand</li>
+      </ul>
+
+      <h3>Next Step</h3>
+      <p><a href="sexy-contexts.html">🔗 Try the Sexy Contexts Worksheet →</a></p>
+    </section>
+
+    <footer>
+      <button onclick="location.href='index.html'">Start Over</button>
+    </footer>
+
+    <script>
+      const name = localStorage.getItem("name");
+      if (name) {
+        document.getElementById("namePlaceholder").textContent = name;
+      }
+    </script>
+  </div>
+</body>
+</html>

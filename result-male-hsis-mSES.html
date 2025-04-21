@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your Results – High SIS, Medium SES (Male)</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h2>Your Sexual Temperament Summary</h2>
+      <p class="subheading">Profile: <strong>High Inhibition (SIS) + Medium Excitation (SES)</strong></p>
+    </header>
+
+    <section>
+      <p>Hey <strong><span id="namePlaceholder">friend</span></strong>, your system is cautious—but it responds when the conditions are right. You may be turned on by connection, safety, and subtle cues—but turned off quickly by stress or disconnection.</p>
+
+      <h3>What This Means</h3>
+      <p>You might feel like arousal is hit-or-miss. That’s because your brain is running two systems: one checking for safety (brakes), and one waiting for cues (accelerator). You thrive in trust, comfort, and closeness.</p>
+
+      <h3>Suggestions</h3>
+      <ul>
+        <li>💬 Communicate what eases your anxiety and what excites you</li>
+        <li>🧘‍♂️ Take time—don’t rush intimacy or pressure yourself</li>
+        <li>🎧 Focus on setting the tone: lighting, sound, scent</li>
+      </ul>
+
+      <h3>Next Step</h3>
+      <p><a href="sexy-contexts.html">🔗 Try the Sexy Contexts Worksheet →</a></p>
+    </section>
+
+    <footer>
+      <button onclick="location.href='index.html'">Start Over</button>
+    </footer>
+
+    <script>
+      const name = localStorage.getItem("name");
+      if (name) {
+        document.getElementById("namePlaceholder").textContent = name;
+      }
+    </script>
+  </div>
+</body>
+</html>

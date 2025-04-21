@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your Results – High SIS, Low SES (Male)</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h2>Your Sexual Temperament Summary</h2>
+      <p class="subheading">Profile: <strong>High Inhibition (SIS) + Low Excitation (SES)</strong></p>
+    </header>
+
+    <section>
+      <p>Hey <strong><span id="namePlaceholder">friend</span></strong>, your brakes hit hard and your arousal takes time. That’s not broken—it’s a system wired for safety, not urgency.</p>
+
+      <h3>What This Means</h3>
+      <p>You’re likely very sensitive to stress, pressure, or mood shifts during intimacy. And you may not feel easily turned on by typical stimuli. Your path to arousal is built slowly and intentionally.</p>
+
+      <h3>Suggestions</h3>
+      <ul>
+        <li>🧘‍♂️ Use mindfulness and emotional check-ins before sex</li>
+        <li>🕯️ Create private, sensory-rich environments with no pressure</li>
+        <li>📖 Explore slow-burn arousal through imagination or stories</li>
+      </ul>
+
+      <h3>Next Step</h3>
+      <p><a href="sexy-contexts.html">🔗 Try the Sexy Contexts Worksheet →</a></p>
+    </section>
+
+    <footer>
+      <button onclick="location.href='index.html'">Start Over</button>
+    </footer>
+
+    <script>
+      const name = localStorage.getItem("name");
+      if (name) {
+        document.getElementById("namePlaceholder").textContent = name;
+      }
+    </script>
+  </div>
+</body>
+</html>

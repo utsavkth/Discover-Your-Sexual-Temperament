@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your Results – Medium SIS, Low SES</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h2>Your Sexual Temperament Summary</h2>
+      <p class="subheading">Profile: <strong>Medium Inhibition (SIS) + Low Excitation (SES)</strong></p>
+    </header>
+
+    <section>
+      <p>Hey <strong><span id="namePlaceholder">friend</span></strong>, you tend to hesitate when it comes to sex, and you don’t get aroused very easily. You’re not alone—many people are in this range.</p>
+
+      <h3>What This Means</h3>
+      <p>Your sexual brakes engage depending on context, and your arousal cues might need to be more intentional. You’re not broken—you just need a setting that’s calming and stimulating at the same time.</p>
+
+      <h3>Suggestions</h3>
+      <ul>
+        <li>🧘 Focus on relaxation and mental clarity first</li>
+        <li>💡 Increase sexual cues—try scent, touch, fantasy</li>
+        <li>📅 Build anticipation with slow, mindful rituals</li>
+      </ul>
+
+      <h3>Next Step</h3>
+      <p><a href="sexy-contexts.html">🔗 Try the Sexy Contexts Worksheet →</a></p>
+    </section>
+
+    <footer>
+      <button onclick="location.href='index.html'">Start Over</button>
+    </footer>
+
+    <script>
+      const name = localStorage.getItem("name");
+      if (name) {
+        document.getElementById("namePlaceholder").textContent = name;
+      }
+    </script>
+  </div>
+</body>
+</html>
