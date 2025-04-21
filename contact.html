@@ -32,35 +32,48 @@
     </div>
     </nav>
 
-  <div class="container">
-    <h1>Let's Connect</h1>
-    <p>This isn’t just a quiz — it’s a conversation starter. If something resonated, sparked curiosity, or you just want to say hey — feel free to drop a message.</p>
-
-    <p>Email me at: <a href="mailto:utsavkth@gmail.com">utsav@gmail.com</a></p>
-    <p style="font-size: 0.9rem; color: #888;">No spam. No mailing lists. Just a real person reading it.</p>
-  </div>
-
-  <footer>
-    Built with ❤️ by Utsav • Inspired by real science, not social media
-  </footer>
-
-  <script>
-    function toggleMenu() {
-      document.getElementById("navLinks").classList.toggle("show");
-    }
-
-    function toggleDropdown(event) {
-      event.stopPropagation();
-      const dropdown = event.target.closest('.dropdown');
-      dropdown.classList.toggle("show");
-
-      document.addEventListener("click", function handler(e) {
-        if (!dropdown.contains(e.target)) {
-          dropdown.classList.remove("show");
-          document.removeEventListener("click", handler);
-        }
-      });
-    }
-  </script>
-</body>
-</html>
+    <div class="container">
+      <h1>Reach Out</h1>
+      <p>This isn’t a quiz. It’s a reflection. A start. A question mark.</p>
+      <p>If something hit deep, made you pause, or even made you laugh — I’d love to hear from you.</p>
+  
+      <p>Email me at: <a href="mailto:utsavkth@gmail.com">utsavkth@gmail.com</a></p>
+      <p style="font-size: 0.9rem; color: #888;">No bots. No mailing lists. Just a real guy who reads what matters.</p>
+  
+      <div style="margin-top: 2rem;">
+        <p style="font-style: italic; font-size: 0.95rem; color: #777;">Not sure what to say? You could start like this:</p>
+        <ul style="list-style-type: '✉️ '; padding-left: 1rem; color: #555; font-size: 0.95rem;">
+          <li>“Hey, I went through the reflection tool and this part really stayed with me...”</li>
+          <li>“This result described me too well. Wtf.”</li>
+          <li>“Do you have resources for couples or partners?”</li>
+          <li>“I never thought about brakes and gas pedals like this before.”</li>
+        </ul>
+      </div>
+  
+      <p style="margin-top: 2.5rem;">Thanks for being curious enough to get this far. That alone says a lot. 👁️‍🗨️</p>
+    </div>
+  
+    <footer>
+      <p>Built with ❤️ by Utsav • Inspired by <em>Come As You Are</em> by Dr. Emily Nagoski</p>
+    </footer>
+  
+    <script>
+      function toggleMenu() {
+        document.getElementById("navLinks").classList.toggle("show");
+      }
+  
+      function toggleDropdown(event) {
+        event.stopPropagation();
+        const dropdown = event.target.closest('.dropdown');
+        dropdown.classList.toggle("show");
+  
+        document.addEventListener("click", function handler(e) {
+          if (!dropdown.contains(e.target)) {
+            dropdown.classList.remove("show");
+            document.removeEventListener("click", handler);
+          }
+        });
+      }
+    </script>
+  </body>
+  </html>
