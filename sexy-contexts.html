@@ -7,6 +7,30 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- ✅ NAVIGATION BAR -->
+<nav class="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo">
+      <img src="logo.png" alt="Logo" />
+    </a>
+
+    <div class="nav-toggle" onclick="toggleMenu()">☰</div>
+
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+
+      <div class="dropdown">
+        <span class="dropdown-toggle" onclick="toggleDropdown(event)">Dive Deeper ▾</span>
+        <div class="dropdown-menu">
+          <a href="https://utsavkth.github.io/Discover-Your-Love-Language/" target="_blank">Love Language Quiz</a>
+          <a href="https://utsavkth.github.io/Discover-Your-Attachment-Style/" target="_blank">Attachment Style Quiz</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
   <div class="container">
     <header>
       <h1>Sexy Contexts Worksheet</h1>
@@ -45,12 +69,32 @@
       <h2>🌱 Final Note</h2>
       <p>This isn’t about fixing yourself. It’s about <strong>understanding yourself</strong>. Your context is your key. Set it up right, and the rest will follow naturally.</p>
 
-      <p><a href="index.html">⬅ Back to Start</a></p>
+
+      <button class="nav-button" onclick="location.href='index.html'">⬅ Back to Start</button>
+
     </section>
 
     <footer>
       <p>Inspired by <em>Come As You Are</em> by Emily Nagoski</p>
     </footer>
   </div>
+  <script>
+    function toggleMenu() {
+      document.getElementById("navLinks").classList.toggle("show");
+    }
+  
+    function toggleDropdown(event) {
+      event.stopPropagation();
+      const dropdown = event.target.closest('.dropdown');
+      dropdown.classList.toggle("show");
+  
+      document.addEventListener("click", function handler(e) {
+        if (!dropdown.contains(e.target)) {
+          dropdown.classList.remove("show");
+          document.removeEventListener("click", handler);
+        }
+      });
+    }
+  </script>
 </body>
 </html>

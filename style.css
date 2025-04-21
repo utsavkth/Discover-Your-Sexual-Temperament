@@ -1,175 +1,317 @@
 /* === Modern Sexual Temperament Quiz UI === */
 
 body {
-    margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background: linear-gradient(to bottom right, #fdfbfb, #ebedee);
-    color: #333;
-  }
-  
-  .container {
-    max-width: 700px;
-    margin: 5vh auto;
-    padding: 2rem;
-    background: white;
-    border-radius: 16px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
-  }
-  
-  #welcomeText {
-    text-align: center;
-    font-size: 1.2rem;
-    margin-bottom: 1.5rem;
-    color: #666;
-  }
-  
-  #progressBar {
-    height: 6px;
-    background-color: #7f5af0;
-    border-radius: 999px;
-    margin-bottom: 1.5rem;
-    transition: width 0.3s ease;
-  }
-  
-  .question-counter {
-    display: inline-block;
-    background-color: #ececec;
-    color: #555;
-    padding: 6px 12px;
-    border-radius: 999px;
-    font-size: 0.9rem;
-    margin-bottom: 1rem;
-  }
-  
-  .question-text {
-    font-size: 1.3rem;
-    font-weight: 600;
-    margin-bottom: 1.2rem;
-    color: #222;
-  }
-  
-  .options {
-    display: flex;
-    flex-direction: column;
-    gap: 0.8rem;
-  }
-  
-  .option {
-    background-color: #f7f7f7;
-    border: 1px solid #dcdcdc;
-    border-radius: 10px;
-    padding: 12px 16px;
-    cursor: pointer;
-    transition: all 0.25s ease;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-  }
-  
-  .option:hover {
-    background-color: #edeef1;
-    border-color: #bbb;
-  }
-  
-  .option input[type="radio"] {
-    accent-color: #7f5af0;
-    transform: scale(1.2);
-  }
-  
-  button {
-    margin-top: 2rem;
-    padding: 12px 20px;
-    border-radius: 10px;
-    background-color: #7f5af0;
-    color: white;
-    border: none;
-    font-weight: bold;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  button:hover {
-    background-color: #5c3dcf;
-  }
-  
-  footer {
-    text-align: center;
-    margin-top: 2rem;
-    font-size: 0.9rem;
-    color: #888;
-  }
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom right, #fdfbfb, #ebedee);
+  color: #333;
+}
 
-  input, select {
-    width: 100%;
-    padding: 0.75rem;
-    font-size: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    transition: border 0.2s ease;
-  }
-  
-  input:focus, select:focus {
-    border-color: #7f5af0;
-    outline: none;
-    box-shadow: 0 0 0 3px rgba(127, 90, 240, 0.2);
-  }
- 
+.container {
+  max-width: 700px;
+  margin: 5vh auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+#welcomeText {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  color: #666;
+}
+
+#progressBar {
+  height: 6px;
+  background-color: #7f5af0;
+  border-radius: 999px;
+  margin-bottom: 1.5rem;
+  transition: width 0.3s ease;
+}
+
+.question-counter {
+  display: inline-block;
+  background-color: #ececec;
+  color: #555;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.question-text {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+  color: #222;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.option {
+  background-color: #f7f7f7;
+  border: 1px solid #dcdcdc;
+  border-radius: 10px;
+  padding: 12px 16px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.option:hover {
+  background-color: #edeef1;
+  border-color: #bbb;
+}
+
+.option input[type="radio"] {
+  accent-color: #7f5af0;
+  transform: scale(1.2);
+}
+
+button {
+  margin-top: 2rem;
+  padding: 12px 20px;
+  border-radius: 10px;
+  background-color: #7f5af0;
+  color: white;
+  border: none;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #5c3dcf;
+}
+
+footer {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: #888;
+}
+
+input, select {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  transition: border 0.2s ease;
+}
+
+input:focus, select:focus {
+  border-color: #7f5af0;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(127, 90, 240, 0.2);
+}
+
 /* Enhanced Option Styling */
 .options {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
-  
-  .option {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border: 2px solid transparent;
-    border-radius: 12px;
-    padding: 1rem;
-    background: #f9f9fb;
-    cursor: pointer;
-    font-weight: 500;
-    transition: all 0.25s ease;
-    position: relative;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
-  }
-  
-  .option input[type="radio"] {
-    appearance: none;
-    width: 18px;
-    height: 18px;
-    border: 2px solid #bbb;
-    border-radius: 50%;
-    transition: 0.2s ease;
-    margin-right: 12px;
-    position: relative;
-  }
-  
-  .option input[type="radio"]:checked {
-    border-color: #7f5af0;
-    background-color: #7f5af0;
-  }
-  
-  .option input[type="radio"]:checked::after {
-    content: '';
-    position: absolute;
-    width: 6px;
-    height: 6px;
-    background: white;
-    border-radius: 50%;
-    top: 4px;
-    left: 4px;
-  }
-  
-  .option:hover {
-    background-color: #f0f0fa;
-    border-color: #ddd;
-  }
-  
-  .option input[type="radio"]:focus-visible {
-    outline: 3px solid rgba(127, 90, 240, 0.4);
-  }
-  
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  padding: 1rem;
+  background: #f9f9fb;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.25s ease;
+  position: relative;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+}
+
+.option input[type="radio"] {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #bbb;
+  border-radius: 50%;
+  transition: 0.2s ease;
+  margin-right: 12px;
+  position: relative;
+}
+
+.option input[type="radio"]:checked {
+  border-color: #7f5af0;
+  background-color: #7f5af0;
+}
+
+.option input[type="radio"]:checked::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: white;
+  border-radius: 50%;
+  top: 4px;
+  left: 4px;
+}
+
+.option:hover {
+  background-color: #f0f0fa;
+  border-color: #ddd;
+}
+
+.option input[type="radio"]:focus-visible {
+  outline: 3px solid rgba(127, 90, 240, 0.4);
+}
+
+
+
+/* === GLOBAL NAVBAR STYLING === */
+.navbar {
+background: white;
+padding: 1rem 2rem;
+position: sticky;
+top: 0;
+z-index: 1000;
+box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.nav-container {
+display: flex;
+justify-content: space-between;
+align-items: center;
+flex-wrap: wrap;
+}
+
+.nav-logo img {
+height: 80px;
+max-height: 90px;
+width: auto;
+}
+
+.nav-links {
+display: flex;
+align-items: center;
+gap: 1.5rem;
+transition: max-height 0.3s ease;
+}
+
+.nav-links a,
+.dropdown-toggle {
+text-decoration: none;
+color: #333;
+font-weight: 500;
+cursor: pointer;
+}
+
+.nav-toggle {
+display: none;
+font-size: 1.8rem;
+cursor: pointer;
+}
+
+.dropdown {
+position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  left: auto;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  overflow: hidden;
+  display: none;
+  flex-direction: column;
+  min-width: 220px;
+  z-index: 999;
+}
+
+
+.dropdown-menu a {
+padding: 0.75rem 1rem;
+white-space: nowrap;
+color: #333;
+}
+
+.dropdown-menu a:hover {
+background: #f0f0f0;
+}
+
+.dropdown.show .dropdown-menu {
+display: flex;
+}
+
+@media (max-width: 768px) {
+.nav-toggle {
+  display: block;
+}
+
+.nav-links {
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  max-height: 0;
+  overflow: hidden;
+}
+
+.nav-links.show {
+  display: flex;
+  max-height: 500px;
+  margin-top: 1rem;
+}
+
+.dropdown-menu {
+  position: static;
+  box-shadow: none;
+  background: #f9f9fb;
+}
+
+.dropdown-menu a {
+  padding-left: 1.5rem;
+}
+}
+
+
+.nav-button {
+  background-color: transparent;
+  color: #7f5af0;
+  border: 2px solid #7f5af0;
+  padding: 10px 18px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 2rem;
+  display: inline-block;
+  box-shadow: 0 0 0 transparent;
+}
+
+.nav-button:hover {
+  background-color: #7f5af0;
+  color: white;
+  box-shadow: 0 4px 12px rgba(127, 90, 240, 0.2);
+}
+
+.result-image-container {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.result-image {
+  max-width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
