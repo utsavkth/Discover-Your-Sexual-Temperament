@@ -7,6 +7,26 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <nav class="navbar">
+    <div class="nav-container">
+    <a class="nav-logo" href="index.html">
+    <img alt="Logo" src="logo.png"/>
+    </a>
+    <div class="nav-toggle" onclick="toggleMenu()">☰</div>
+    <div class="nav-links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <div class="dropdown">
+    <span class="dropdown-toggle" onclick="toggleDropdown(event)">Dive Deeper ▾</span>
+    <div class="dropdown-menu">
+    <a href="https://utsavkth.github.io/Discover-Your-Love-Language/" target="_blank">Discover Your Love Language</a>
+    <a href="https://utsavkth.github.io/Discover-Your-Attachment-Style/" target="_blank">Discover Your Attachment Style</a>
+    </div>
+    </div>
+    </div>
+    </div>
+    </nav>
   <div class="container">
     <header>
       <h2>Your Sexual Temperament Summary</h2>
@@ -14,21 +34,28 @@
     </header>
 
     <section>
+      <div class="result-image-container">
+        <img src="result-male-lsis-hSES.png" alt="Visual representing Low SIS and High SES for males" class="result-image" />
+      </div>
+    
       <p>Hey <strong><span id="namePlaceholder">friend</span></strong>, your brain’s built to crave pleasure. You’re quick to arouse and rarely held back by inhibitions—just be mindful of emotional depth and presence.</p>
-
+    
       <h3>What This Means</h3>
       <p>This combo is a high-desire profile. It’s great for passionate intimacy and spontaneity—but it may lead to chasing stimulation rather than depth unless balanced with intention.</p>
-
+    
       <h3>Suggestions</h3>
       <ul>
         <li>💥 Embrace your desire, but check for emotional grounding</li>
         <li>🧠 Explore what fuels deep connection, not just intensity</li>
         <li>🛑 Set healthy boundaries around impulse-based arousal</li>
       </ul>
-
+    
       <h3>Next Step</h3>
-      <p><a href="sexy-contexts.html">🔗 Try the Sexy Contexts Worksheet →</a></p>
+      <button class="nav-button" onclick="location.href='sexy-contexts.html'">🔗 Try the Sexy Contexts Worksheet →</button>
     </section>
+    
+    
+    
 
     <footer>
       <button onclick="location.href='index.html'">Start Over</button>
@@ -41,5 +68,23 @@
       }
     </script>
   </div>
+  <script>
+    function toggleMenu() {
+      document.getElementById("navLinks").classList.toggle("show");
+    }
+  
+    function toggleDropdown(event) {
+      event.stopPropagation();
+      const dropdown = event.target.closest('.dropdown');
+      dropdown.classList.toggle("show");
+  
+      document.addEventListener("click", function handler(e) {
+        if (!dropdown.contains(e.target)) {
+          dropdown.classList.remove("show");
+          document.removeEventListener("click", handler);
+        }
+      });
+    }
+  </script>
 </body>
 </html>

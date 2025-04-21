@@ -7,6 +7,26 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <nav class="navbar">
+    <div class="nav-container">
+    <a class="nav-logo" href="index.html">
+    <img alt="Logo" src="logo.png"/>
+    </a>
+    <div class="nav-toggle" onclick="toggleMenu()">☰</div>
+    <div class="nav-links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <div class="dropdown">
+    <span class="dropdown-toggle" onclick="toggleDropdown(event)">Dive Deeper ▾</span>
+    <div class="dropdown-menu">
+    <a href="https://utsavkth.github.io/Discover-Your-Love-Language/" target="_blank">Discover Your Love Language</a>
+    <a href="https://utsavkth.github.io/Discover-Your-Attachment-Style/" target="_blank">Discover Your Attachment Style</a>
+    </div>
+    </div>
+    </div>
+    </div>
+    </nav>
   <div class="container">
     <header>
       <h2>Your Sexual Temperament Summary</h2>
@@ -14,21 +34,26 @@
     </header>
 
     <section>
+      <div class="result-image-container">
+        <img src="result-male-hsis-hSES.png" alt="Visual representing High SIS and High SES for males" class="result-image" />
+      </div>
+    
       <p>Hey <strong><span id="namePlaceholder">friend</span></strong>, you’re complex and responsive. You’re very arousable, but you’re also highly reactive to context—both positively and negatively.</p>
-
+    
       <h3>What This Means</h3>
       <p>Great sex for you requires syncing your inner green lights and red lights. When excitement is high and brakes are off, it’s 🔥. But if something feels off—boom, arousal gone. You need intentional, supportive intimacy.</p>
-
+    
       <h3>Suggestions</h3>
       <ul>
         <li>🧠 Track what flips your brakes—journal or reflect on patterns</li>
         <li>🎯 When aroused, slow down to stay present—not rushed</li>
         <li>📖 Explore deeper connection and safety-building activities</li>
       </ul>
-
+    
       <h3>Next Step</h3>
       <p><a href="sexy-contexts.html">🔗 Try the Sexy Contexts Worksheet →</a></p>
     </section>
+    
 
     <footer>
       <button onclick="location.href='index.html'">Start Over</button>
@@ -41,5 +66,23 @@
       }
     </script>
   </div>
+  <script>
+    function toggleMenu() {
+      document.getElementById("navLinks").classList.toggle("show");
+    }
+  
+    function toggleDropdown(event) {
+      event.stopPropagation();
+      const dropdown = event.target.closest('.dropdown');
+      dropdown.classList.toggle("show");
+  
+      document.addEventListener("click", function handler(e) {
+        if (!dropdown.contains(e.target)) {
+          dropdown.classList.remove("show");
+          document.removeEventListener("click", handler);
+        }
+      });
+    }
+  </script>
 </body>
 </html>
