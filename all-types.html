@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Explore All Sexual Temperament Types</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <img src="logo.png" alt="Logo" />
+      </a>
+      <div class="nav-toggle" onclick="toggleMenu()">☰</div>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <div class="dropdown">
+          <span class="dropdown-toggle" onclick="toggleDropdown(event)">Dive Deeper ▾</span>
+          <div class="dropdown-menu">
+            <a href="https://utsavkth.github.io/Discover-Your-Love-Language/" target="_blank">💌 Discover Your Love Language</a>
+            <a href="https://utsavkth.github.io/Discover-Your-Attachment-Style/" target="_blank">🔗 Discover Your Attachment Style</a>
+          </div>
+        </div>
+        <a href="start.html" class="nav-button">Begin Your Discovery</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h1>Explore All Sexual Temperament Profiles</h1>
+    <p>Each profile is a unique combination of how sensitive you are to what turns you on (SES) and what turns you off (SIS). Curious how other types experience desire? Browse them all below.</p>
+
+    <h2>♀️ Female Profiles</h2>
+    <div class="profile-buttons">
+<a href="result-female-hsis-hSES.html" class="nav-button">HSIS + HSES</a>
+<a href="result-female-hsis-mSES.html" class="nav-button">HSIS + MSES</a>
+<a href="result-female-hsis-lSES.html" class="nav-button">HSIS + LSES</a>
+<a href="result-female-msis-hSES.html" class="nav-button">MSIS + HSES</a>
+<a href="result-female-msis-mSES.html" class="nav-button">MSIS + MSES</a>
+<a href="result-female-msis-lSES.html" class="nav-button">MSIS + LSES</a>
+<a href="result-female-lsis-hSES.html" class="nav-button">LSIS + HSES</a>
+<a href="result-female-lsis-mSES.html" class="nav-button">LSIS + MSES</a>
+<a href="result-female-lsis-lSES.html" class="nav-button">LSIS + LSES</a>
+    </div>
+
+    <h2>♂️ Male Profiles</h2>
+    <div class="profile-buttons">
+<a href="result-male-hsis-hSES.html" class="nav-button">HSIS + HSES</a>
+<a href="result-male-hsis-mSES.html" class="nav-button">HSIS + MSES</a>
+<a href="result-male-hsis-lSES.html" class="nav-button">HSIS + LSES</a>
+<a href="result-male-msis-hSES.html" class="nav-button">MSIS + HSES</a>
+<a href="result-male-msis-mSES.html" class="nav-button">MSIS + MSES</a>
+<a href="result-male-msis-lSES.html" class="nav-button">MSIS + LSES</a>
+<a href="result-male-lsis-hSES.html" class="nav-button">LSIS + HSES</a>
+<a href="result-male-lsis-mSES.html" class="nav-button">LSIS + MSES</a>
+<a href="result-male-lsis-lSES.html" class="nav-button">LSIS + LSES</a>
+    </div>
+
+    <h2>⚧️ Neutral Profiles</h2>
+    <div class="profile-buttons">
+<a href="result-neutral-hsis-hSES.html" class="nav-button">HSIS + HSES</a>
+<a href="result-neutral-hsis-mSES.html" class="nav-button">HSIS + MSES</a>
+<a href="result-neutral-hsis-lSES.html" class="nav-button">HSIS + LSES</a>
+<a href="result-neutral-msis-hSES.html" class="nav-button">MSIS + HSES</a>
+<a href="result-neutral-msis-mSES.html" class="nav-button">MSIS + MSES</a>
+<a href="result-neutral-msis-lSES.html" class="nav-button">MSIS + LSES</a>
+<a href="result-neutral-lsis-hSES.html" class="nav-button">LSIS + HSES</a>
+<a href="result-neutral-lsis-mSES.html" class="nav-button">LSIS + MSES</a>
+<a href="result-neutral-lsis-lSES.html" class="nav-button">LSIS + LSES</a>
+    </div>
+
+    <div style="text-align: center; margin-top: 3rem;">
+      <a href="start.html" class="nav-button">✨ Not Sure Yours Yet? Begin Here</a>
+    </div>
+  </div>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("navLinks").classList.toggle("show");
+    }
+
+    function toggleDropdown(event) {
+      event.stopPropagation();
+      const dropdown = event.target.closest('.dropdown');
+      dropdown.classList.toggle("show");
+      document.addEventListener("click", function handler(e) {
+        if (!dropdown.contains(e.target)) {
+          dropdown.classList.remove("show");
+          document.removeEventListener("click", handler);
+        }
+      });
+    }
+  </script>
+</body>
+</html>
