@@ -26,6 +26,18 @@
 <a href="https://utsavkth.github.io/Discover-Your-Attachment-Style/" target="_blank">🔗 Discover Your Attachment Style</a>
 </div>
 </div>
+<!-- Age Verification Modal -->
+<div id="ageModal" class="age-modal">
+  <div class="age-modal-content">
+    <h2>18+ Only</h2>
+    <p>This site contains adult-oriented content. Please confirm your age to continue.</p>
+    <div class="age-buttons">
+      <button id="ageConfirm">I am 18 or older</button>
+      <button id="ageCancel">Exit</button>
+    </div>
+  </div>
+</div>
+
 <a class="nav-button" href="start.html">Begin Your Discovery</a><p style="text-align: center; color: #888; font-size: 0.9rem; margin-top: 0.5rem;">It’s not a quiz. It’s a mirror.</p>
 </div>
 </div>
@@ -80,6 +92,22 @@
       });
     }
   </script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    if (!sessionStorage.getItem("ageVerified")) {
+      const modal = document.getElementById("ageModal");
+      modal.style.display = "flex";
+
+      document.getElementById("ageConfirm").onclick = () => {
+        sessionStorage.setItem("ageVerified", "true");
+        modal.style.display = "none";
+      };
+      document.getElementById("ageCancel").onclick = () => {
+        window.location.href = "https://www.google.com"; // or any exit page
+      };
+    }
+  });
+</script>
 
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 <script>AOS.init();</script>
